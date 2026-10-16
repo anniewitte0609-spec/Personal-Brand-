@@ -1,0 +1,502 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #1f2430;
+    --yta: #ffffff;
+    --yta-2: #f3f1ec;
+    --kant: #e2ded5;
+    --primar: #1d4e89;
+    --accent: #ffd166;
+    --knapptext: #1f2430;
+    --luft: 1rem;
+    --radie: 12px;
+}
+
+/* ------------------------------
+   GRUND
+------------------------------ */
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--yta);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--primar);
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 65ch;
+}
+
+a {
+    color: var(--primar);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+.sidhuvud {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    padding: 0.75rem 2rem;
+
+    background: #ffffff;
+    color: #000000;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Logga */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+.logo:hover {
+    opacity: 0.85;
+}
+
+/* Navigation */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Temaknapp */
+
+.sidhuvud button {
+    color: #000000;
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+/* ------------------------------
+   HERO
+------------------------------ */
+
+.hero {
+    position: cover;
+    width: 100%;
+    height: 65vh;
+    min-height: 500px;
+    max-height: 700px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.hero-bild {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center 15%;
+
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: calc(var(--luft) * 1.5);
+
+    pointer-events: none;
+
+    background: transparent;
+}
+
+.hero-rubrik {
+    margin: 0;
+    color: #ffffff;
+}
+
+.hero-namn {
+    display: block;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8),
+        0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hero-titel {
+    display: block;
+
+    font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+    font-weight: 400;
+
+    color: #ffffff;
+
+    margin-top: 0.4rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.8),
+        0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* ------------------------------
+   MAIN
+------------------------------ */
+
+main {
+    max-width: 70rem;
+    margin: 0 auto;
+
+    padding: 0 calc(var(--luft) * 1.5);
+}
+
+section {
+    padding: calc(var(--luft) * 3) 0;
+}
+
+/* ------------------------------
+   KNAPPAR
+------------------------------ */
+
+.knapp {
+    display: inline-block;
+
+    padding: 0.75rem 1.35rem;
+
+    background: #000000;
+    color: #ffffff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-radius: var(--radie);
+
+    transition:
+        background 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.knapp:hover {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+button {
+    font: inherit;
+
+    padding: 0.6rem 1.1rem;
+
+    color: var(--primar);
+    background: var(--yta);
+
+    border: 2px solid var(--primar);
+
+    border-radius: var(--radie);
+
+    cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primar);
+    outline-offset: 3px;
+}
+
+/* ------------------------------
+   RUTNÄT OCH KORT
+------------------------------ */
+
+.rutnat {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: calc(var(--luft) * 1.5);
+
+    list-style: none;
+
+    padding: 0;
+}
+
+.kort {
+    background: var(--yta-2);
+
+    padding: calc(var(--luft) * 1.5);
+
+    border: 1px solid var(--kant);
+
+    border-radius: var(--radie);
+}
+
+.kort h3 {
+    margin-top: 0;
+}
+
+.kort img {
+    border-radius: calc(var(--radie) / 2);
+
+    margin-bottom: var(--luft);
+}
+
+/* ------------------------------
+   KONTAKT
+------------------------------ */
+
+.kontakt {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.kontakt-text {
+    flex: 1;
+}
+
+.kontakt-text h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.kontakt-text p {
+    margin: 0.4rem auto;
+}
+
+.kontakt-bild {
+    width: 150px;
+    height: 150px;
+
+    min-width: 150px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 50%;
+
+    margin: 0;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    padding: calc(var(--luft) * 2);
+
+    text-align: center;
+
+    background: var(--yta-2);
+}
+
+footer p {
+    margin: 0 auto;
+}
+
+/* ------------------------------
+   DESKTOP
+------------------------------ */
+
+@media (min-width: 48rem) {
+
+    .sidhuvud {
+        padding: 0.65rem 3rem;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ------------------------------
+   MOBIL
+------------------------------ */
+
+@media (max-width: 47.99rem) {
+
+    .sidhuvud {
+        padding: 0.75rem 1.25rem;
+        gap: 1rem;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .kontakt {
+        flex-direction: column;
+
+        gap: 1rem;
+
+        text-align: center;
+    }
+
+    .kontakt-bild {
+        width: 130px;
+        height: 130px;
+
+        min-width: 130px;
+    }
+
+    .kontakt-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero {
+        min-height: 80vh;
+        min-height: 80dvh;
+    }
+
+    .hero-bild {
+        height: 80vh;
+        height: 80dvh;
+    }
+}
+
+/* ------------------------------
+   MÖRKT LÄGE
+------------------------------ */
+
+body.morkt {
+    --text: #e8e6e1;
+    --yta: #14171f;
+    --yta-2: #1f2430;
+    --kant: #343a48;
+    --primar: #8ab4f8;
+}
+
+body.morkt .sidhuvud {
+    background: #14171f;
+    color: var(--text);
+    border-bottom-color: var(--kant);
+}
+
+body.morkt nav a {
+    color: var(--text);
+}
+
+body.morkt .sidhuvud button {
+    color: var(--text);
+    background: #14171f;
+    border-color: var(--kant);
+}
+
+body.morkt .knapp {
+    background: #ffffff;
+    color: #14171f;
+}
+
+body.morkt .knapp:hover {
+    background: #e8e6e1;
+}
