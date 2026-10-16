@@ -7,6 +7,9 @@
     <title>Annie Witte – Digital marknadsförare i Göteborg</title>
     <meta name="description"
         content="Annie Witte hjälper små företag att synas och växa digitalt med sök, sociala medier och e-post. Se projekt och ta kontakt.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script defer src="script.js"></script>
     <!-- Google Tag Manager -->
@@ -41,23 +44,35 @@
         </nav>
         <button id="tema" type="button" hidden>Byt till mörkt läge</button>
     </header>
-    <section class="hero">
-        <img src="img/hero-liggandes.png"
-            alt="Annie Witte – Digital Marketing Specialist" class="hero-bild">
-        <div class="hero-overlay">
-            <h1 class="hero-rubrik">
-                <span class="hero-namn">Annie Witte</span>
-                <span class="hero-titel">Digital Marketing Specialist</span>
-            </h1>
+    <section class="hero" aria-label="Introduktion">
+        <div class="hero-innehall">
+            <div class="hero-text">
+                <h1 class="hero-rubrik">
+                    <span class="hero-namn">
+                        <span class="hero-namn-rad">Annie</span>
+                        <span class="hero-namn-rad">Witte</span>
+                    </span>
+                    <span class="hero-titel">Digital Marketing Specialist</span>
+                </h1>
+            </div>
+            <div class="hero-bild-omslag">
+                <img src="img/linkedin-bild.png"
+                    alt="Porträtt av Annie Witte – Digital Marketing Specialist" class="hero-bild">
+            </div>
         </div>
     </section>
     <main>
         <section id="om">
-            <h2>Om mig</h2>
-            <p>Jag utbildar mig till Digital Marketing Specialist på IHM Business School och har ett särskilt intresse
-                för lokala företag.</p>
-            <p>Innan utbildningen arbetade jag i butik och såg hur mycket en bra Google-profil och ett tydligt
-                erbjudande betyder för små företag. Nu lär jag mig verktygen för att hjälpa dem på riktigt.</p>
+            <div class="om-innehall">
+                <div class="om-text">
+                    <h2>Om mig</h2>
+                    <p>Jag utbildar mig till Digital Marketing Specialist på IHM Business School och har ett särskilt intresse
+                        för lokala företag.</p>
+                    <p>Innan utbildningen arbetade jag i butik och såg hur mycket en bra Google-profil och ett tydligt
+                        erbjudande betyder för små företag. Nu lär jag mig verktygen för att hjälpa dem på riktigt.</p>
+                </div>
+                <img src="img/om-mig.png" alt="Porträtt av Annie Witte" class="om-bild">
+            </div>
         </section>
         <section id="utbildning">
             <h2>Utbildning</h2>
@@ -107,6 +122,8 @@
                     <p><a href="mailto:anniewitte0609@gmail.com">anniewitte0609@gmail.com</a></p>
                     <p><a href="https://www.linkedin.com/" target="_blank" rel="noopener">Annie Witte på LinkedIn</a>
                     </p>
+
+                    <div class="kontaktformular" id="hubspot-form" aria-live="polite"></div>
                 </div>
                 <img src="img/kontakt.png" alt="Porträtt av Annie Witte"
                     class="kontakt-bild">
@@ -116,6 +133,17 @@
     <footer>
         <p>© 2026 Annie Witte · Byggd för hand med HTML, CSS och JavaScript</p>
     </footer>
+    <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            hbspt.forms.create({
+                region: "eu1",
+                portalId: "149565937",
+                formId: "03ff3041-6f5e-4e1e-bebf-009c20f19135",
+                target: "#hubspot-form"
+            });
+        });
+    </script>
 </body>
 
 </html>
