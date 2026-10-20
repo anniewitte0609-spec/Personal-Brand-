@@ -354,27 +354,3 @@ body.morkt {
 
 body.morkt .formularknapp { color: #15130f; background: #f4f0e8; border-color: #f4f0e8; }
 
-@media (max-width: 700px) {
-    body { background: var(--yta); }
-    .sidhuvud { min-height: 0; margin: 0; padding: 1rem; border: 0; border-bottom: 1px solid var(--kant); }
-    .logo img { width: 96px; }
-    nav ul { gap: 0.7rem; }
-    nav a { font-size: 0.56rem; }
-    .sidhuvud button { display: none; }
-    .hero, main, footer { border-right: 0; border-left: 0; }
-    .hero { border-top: 0; }
-    .hero-innehall, .kontakt { grid-template-columns: 1fr; }
-    .hero-bild-omslag { min-height: 420px; border-right: 0; border-bottom: 1px solid var(--kant); }
-    .hero-bild { min-height: 420px; }
-    .hero-text { min-height: 360px; padding: 3rem 1.5rem; }
-    .hero-namn { font-size: clamp(4.2rem, 21vw, 6rem); }
-    section { padding: 4rem 1.5rem; }
-    .om-innehall { grid-template-columns: 1fr; gap: 2rem; }
-    .om-bild { max-width: 420px; max-height: none; }
-    .rutnat { grid-template-columns: 1fr; }
-    .kort { border-right: 0; border-bottom: 1px solid var(--kant); }
-    .kort:last-child { border-bottom: 0; }
-    .kontakt-bild { min-height: 420px; }
-    .kontakt-text { padding: 3.5rem 1.5rem; border-top: 1px solid var(--kant); border-left: 0; }
-    footer { margin: 0; }
-}
