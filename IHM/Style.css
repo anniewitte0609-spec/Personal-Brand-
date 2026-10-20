@@ -470,8 +470,8 @@ section {
     .kontakt-text { grid-column: 2; }
 }
 
-.kontakt-text h2 { max-width: 8ch; margin-bottom: 1.5rem; }
-.kontakt-text > p { margin: 0.45rem 0; }
+.kontakt-text h2 { max-width: 13ch; margin-bottom: 1rem; font-style: italic; }
+.kontakt-text > p { margin: 0; font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.6; }
 
 .kontaktformular {
     margin-top: 2.5rem;
