@@ -12,3 +12,12 @@ function bytTema() {
 }
 
 temaknapp.addEventListener("click", bytTema);
+
+const tillToppen = document.querySelector(".till-toppen");
+
+if (tillToppen) {
+    tillToppen.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
