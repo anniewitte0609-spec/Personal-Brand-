@@ -9,7 +9,9 @@
         content="Annie Witte hjälper små företag att synas och växa digitalt med sök, sociala medier och e-post. Se projekt och ta kontakt.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script defer src="script.js"></script>
     <!-- Google Tag Manager -->
@@ -31,33 +33,31 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="sidhuvud">
         <a href="#" class="logo" aria-label="Annie Witte – startsida">
-            <img src="img/logo.png"
-                alt="Annie Witte – Digital Marketing Specialist">
+            <img src="img/logo.png" alt="Annie Witte – Digital Marketing Specialist">
         </a>
         <nav aria-label="Huvudmeny">
             <ul>
                 <li><a href="#om">Om mig</a></li>
                 <li><a href="#utbildning">Utbildning</a></li>
-                <li><a href="#erfarenheter">Erfarenheter</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#projekt">Projekt</a></li>
+                <li><a href="#kompetenser">Kompetenser</a></li>
+                <li><a href="#kontakt">Kontakta mig</a></li>
             </ul>
         </nav>
         <button id="tema" type="button" hidden>Byt till mörkt läge</button>
     </header>
-    <section class="hero" aria-label="Introduktion">
+    <section id="hero" class="hero" aria-label="Introduktion">
         <div class="hero-innehall">
             <div class="hero-text">
                 <h1 class="hero-rubrik">
-                    <span class="hero-namn">
-                        <span class="hero-namn-rad">Annie</span>
-                        <span class="hero-namn-rad">Witte</span>
-                    </span>
+                    <span class="hero-namn">Annie Witte</span>
                     <span class="hero-titel">Digital Marketing Specialist</span>
                 </h1>
+                <a class="hero-knapp" href="#kontakt">Maila mig</a>
             </div>
             <div class="hero-bild-omslag">
-                <img src="img/linkedin-bild.png"
-                    alt="Porträtt av Annie Witte – Digital Marketing Specialist" class="hero-bild">
+                <img src="img/hero-annie-landscape.png" alt="Porträtt av Annie Witte – Digital Marketing Specialist"
+                    class="hero-bild">
             </div>
         </div>
     </section>
@@ -66,53 +66,140 @@
             <div class="om-innehall">
                 <div class="om-text">
                     <h2>Om mig</h2>
-                    <p>Jag utbildar mig till Digital Marketing Specialist på IHM Business School och har ett särskilt intresse
-                        för lokala företag.</p>
-                    <p>Innan utbildningen arbetade jag i butik och såg hur mycket en bra Google-profil och ett tydligt
-                        erbjudande betyder för små företag. Nu lär jag mig verktygen för att hjälpa dem på riktigt.</p>
+                    <p class="om-citat">”Allt behöver inte bli viralt. Men det ska betyda något”</p>
+                    <p>Jag utbildar mig till Digital Marketing Specialist på IHM Business School och fascineras av hur
+                        kreativt innehåll kan väcka intresse, skapa engagemang och bygga relationer. För mig handlar
+                        sociala medier om mer än likes och visningar, det handlar om att skapa innehåll som faktiskt når
+                        fram och stannar kvar.</p>
+                    <p>Vid sidan av mina studier jobbar jag i butik, där jag får värdefull erfarenhet av kundbemötande
+                        och vad som skapar bra kundupplevelser. Jag vill ta med mig den förståelsen in i
+                        marknadsföringen och hjälpa företag, stora som små, att hitta sin röst, nå rätt målgrupp och
+                        lyfta fram det som gör dem unika.</p>
                 </div>
                 <img src="img/om-mig.png" alt="Porträtt av Annie Witte" class="om-bild">
             </div>
         </section>
         <section id="utbildning">
             <h2>Utbildning</h2>
-            <ul class="rutnat">
-                <li class="kort">
-                    <h3>Digital Marketing Specialist</h3>
-                    <p>IHM Business School – yrkeshögskoleutbildning med fokus på digital strategi, analys och modern
-                        marknadsföring.</p>
-                </li>
-                <li class="kort">
-                    <h3>Sök & analys</h3>
-                    <p>Sökordsanalys, SEO, SEM, data och Google-profiler som driver mätbar synlighet och resultat.</p>
-                </li>
-                <li class="kort">
-                    <h3>Kanaler & kampanjer</h3>
-                    <p>Innehållsstrategi och kampanjer för sociala medier samt konverterande e-postflöden.</p>
-                </li>
-            </ul>
-        </section>
-        <section id="erfarenheter">
-            <h2>Erfarenheter</h2>
-            <div class="rutnat">
-                <article class="kort">
-                    <img src="img/projekt-1.jpg" alt="Skärmbild av ett kafés Google-profil med betyg och öppettider"
-                        width="600" height="400">
-                    <h3>Lokal synlighet för ett kafé</h3>
-                    <p>Kursuppgift: plan för Google-profil och sökord för ett fiktivt kafé i Göteborg.</p>
-                </article>
-                <article class="kort">
-                    <img src="img/projekt-2.jpg" alt="Innehållskalender för en månad med inlägg markerade per kanal"
-                        width="600" height="400">
-                    <h3>Innehållsplan för en månad</h3>
-                    <p>Kursuppgift: pelare, kanaler och tolv inlägg för en hållbar kaffeprenumeration.</p>
-                </article>
-                <article class="kort">
-                    <img src="img/projekt-3.jpg" alt="Den här webbplatsen i mobilvy" width="600" height="400">
-                    <h3>Den här sajten</h3>
-                    <p>Handkodad med HTML, CSS och JavaScript, med AI som kodstöd.</p>
-                </article>
+            <div class="kurslista">
+                <details class="kurs">
+                    <summary>Marknadsföring</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Planera inriktning på marknadsföringsåtgärder med hänsyn till kunden i de olika stegen
+                                av köpprocessen.</li>
+                            <li>Tillämpa och redogöra för de olika beståndsdelarna av praktisk marknadsföring och dess
+                                funktionalitet inom en organisation.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="kurs">
+                    <summary>AI och tech för digitala marknadsförare</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Använda grundläggande HTML, CSS och enklare Javascript för att skapa, anpassa och
+                                publicera enklare webbinnehåll.</li>
+                            <li>Använda AI som stöd för research, innehållsarbete, kodförståelse och enklare
+                                problemlösning i webb- och marknadsföringsrelaterade arbetsuppgifter.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="kurs">
+                    <summary>Sökmotoroptimering / SEO</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Analysera webbplatser och identifiera faktorer som påverkar deras synlighet och ranking
+                                i sökmotorer.</li>
+                            <li>Upptäcka förbättringsområden och ge konkreta förslag på hur en webbplats kan optimeras
+                                för att nå bättre resultat.</li>
+                            <li>Använda relevanta verktyg och arbetsmetoder inom SEO, inklusive AI-baserade verktyg,
+                                samt förstå och tillämpa bästa praxis för att öka synligheten både i traditionella
+                                sökmotorer och i AI-genererade sökresultat.</li>
+                            <li>Använda AI-funktioner för att analysera, utveckla och effektivisera SEO-arbetet.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="kurs">
+                    <summary>Paid media – Social och SEM</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Tillämpa verktyg och metodik för att planera, sätta upp och genomföra kampanjer i Google
+                                Ads och sociala medieplattformar.</li>
+                            <li>Utföra kampanj uppsättning med relevanta inställningar, målgrupper, budgetar,
+                                budstrategier, annonsformat och spårning anpassat efter plattform, syfte och mål.</li>
+                            <li>Analysera och optimera kampanjer samt föreslå relevanta förbättringar utifrån
+                                resultatdata, plattformsinsikter och uppsatta mål.</li>
+                            <li>Använda och värdera AI-stöd och automatiserade funktioner i planering, genomförande och
+                                optimering av kampanjer.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="kurs">
+                    <summary>Content &amp; Influencer marketing</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Planera vilket innehåll ett företag ska skapa, för vem och i vilka kanaler.</li>
+                            <li>Ta fram idéer till exempelvis inlägg, kampanjer, videor och innehåll för sociala medier.
+                            </li>
+                            <li>Hitta relevanta influencers, bedöma deras målgrupper och planera samarbeten.</li>
+                            <li>Skapa kampanjer som stärker varumärkeskännedom, engagemang eller försäljning.</li>
+                            <li>Förstå vad målgruppen är intresserad av och anpassa innehållet därefter.</li>
+                            <li>Bedöma hur innehåll och influencer samarbeten presterar, exempelvis genom räckvidd,
+                                engagemang och konverteringar.</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="kurs">
+                    <summary>Tracking och digital analys</summary>
+                    <div class="kurs-innehall">
+                        <ul>
+                            <li>Förstå hur man mäter besökare, klick och andra aktiviteter på en webbplats.</li>
+                            <li>Tolka data för att förstå hur besökare hittar till en webbplats och vad de gör där.</li>
+                            <li>Följa upp kampanjer och bedöma om marknadsföringen når sina mål.</li>
+                            <li>Nyckeltal (KPI:er): Förstå vilka mätvärden som är relevanta, exempelvis
+                                konverteringsgrad, trafik och engagemang.</li>
+                            <li>Sammanställa data och presentera resultat på ett tydligt sätt.</li>
+                            <li>Använda insikter från data för att förbättra webbplatser, kampanjer och
+                                marknadsföringsinsatser.</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
+        </section>
+        <section id="projekt">
+            <div class="projekt-container">
+                <h2 class="projekt-huvudrubrik">Mina Projekt</h2>
+                <div class="projekt-rutnat">
+                    <article class="projekt-kolumn">
+                        <span class="projekt-nummer">01</span>
+                        <h3 class="projekt-titel">Marknadsplan för ett fiktivt företag</h3>
+                        <p class="projekt-beskrivning">En kursuppgift där jag tog fram en marknadsplan för ett fiktivt
+                            företag och planerade dess marknadsföring för ett helt år. Projektet utvecklade mina
+                            kunskaper inom strategiskt tänkande, målformulering, målgruppsanalys och
+                            marknadsföringsstrategi.</p>
+                    </article>
+                    <article class="projekt-kolumn">
+                        <span class="projekt-nummer">02</span>
+                        <h3 class="projekt-titel">Utveckling av affärsidé och hemsida</h3>
+                        <p class="projekt-beskrivning">Ett grupprojekt där vi utvecklade en affärsidé och skapade en
+                            tillhörande hemsida. Jag fick praktisk erfarenhet av AI inom webbutveckling, promptskrivning
+                            och konceptutveckling samt stärkte mina färdigheter inom kreativ problemlösning, UX och
+                            samarbete.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="kompetenser">
+            <h2>Kompetenser</h2>
+            <ul class="kompetenslista">
+                <li>Digital strategi</li>
+                <li>Sökmotoroptimering / SEO</li>
+                <li>Paid media / SEM</li>
+                <li>Sociala medier</li>
+                <li>Content marketing</li>
+                <li>Digital analys</li>
+                <li>AI och webbinnehåll</li>
+            </ul>
         </section>
         <section id="kontakt">
             <div class="kontakt">
@@ -125,13 +212,13 @@
 
                     <div class="kontaktformular" id="hubspot-form" aria-live="polite"></div>
                 </div>
-                <img src="img/kontakt.png" alt="Porträtt av Annie Witte"
-                    class="kontakt-bild">
+                <img src="img/hero-annie-v2.png" alt="Porträtt av Annie Witte" class="kontakt-bild">
             </div>
         </section>
     </main>
-    <footer>
-        <p>© 2026 Annie Witte · Byggd för hand med HTML, CSS och JavaScript</p>
+    <footer class="sidfot">
+        <a class="till-toppen" href="#hero">Gå längst upp</a>
+        <p class="sidfot-detalj">Handkodad med HTML, CSS och JavaScript</p>
     </footer>
     <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
     <script>
