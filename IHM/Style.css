@@ -1,8 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
 
-
-
-
 :root {
     --text: #15130f;
     --yta: #f8f6f0;
@@ -11,13 +8,7 @@
     --delare: rgba(27, 25, 21, 0.28);
 }
 
-
-
-
 html { scroll-behavior: smooth; }
-
-
-
 
 body {
     margin: 0;
@@ -28,9 +19,6 @@ body {
     line-height: 1.55;
 }
 
-
-
-
 h1, h2, h3 {
     margin: 0;
     color: var(--text);
@@ -39,8 +27,861 @@ h1, h2, h3 {
     line-height: 0.98;
 }
 
-
-
-
 h2 { font-size: clamp(2.5rem, 5vw, 5.25rem); letter-spacing: -0.055em; }
 h3 { font-size: clamp(1.6rem, 2.3vw, 2.6rem); letter-spacing: -0.045em; }
+p { max-width: 62ch; }
+a { color: inherit; text-underline-offset: 0.2em; }
+img { display: block; max-width: 100%; }
+
+/* Sidhuvud */
+.sidhuvud {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: 68px;
+    margin: 0;
+    padding: 0.7rem 1.5rem;
+    background: var(--brun);
+    border: 1px solid var(--kant);
+    border-bottom: 0;
+}
+
+.logo { display: flex; align-items: center; }
+.logo img { width: 140px; }
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: clamp(0.7rem, 2vw, 1.75rem);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover { text-decoration: underline; }
+
+.sidhuvud button {
+    padding: 0.3rem 0.5rem;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--kant);
+    border-radius: 0;
+    font: inherit;
+    font-size: 0.65rem;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    margin: 0 auto;
+    background: var(--brun);
+    border: 1px solid var(--kant);
+}
+
+.hero-innehall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: min(58vw, 650px);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    align-items: center;
+    text-align: center;
+    padding: clamp(2rem, 6vw, 6.5rem);
+}
+
+.hero-rubrik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-namn {
+    display: block;
+    font-size: clamp(3.4rem, 7.3vw, 7.25rem);
+    letter-spacing: -0.08em;
+}
+
+.hero-titel {
+    display: block;
+    max-width: 15ch;
+    margin-top: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.75rem, 1.2vw, 1rem);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.hero-knapp {
+    display: inline-block;
+    width: fit-content;
+    margin: 2.5rem auto 0;
+    padding: 0.85rem 1.65rem;
+    color: #15130f;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hero-knapp:hover {
+    background: transparent;
+    border-color: var(--text);
+}
+
+.hero-bild-omslag { order: 1; min-height: 100%; border-right: 1px solid var(--kant); }
+
+.hero-bild {
+    width: 100%;
+    height: 100%;
+    min-height: min(58vw, 650px);
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Innehåll */
+main {
+    margin: 0 auto;
+    background: var(--yta);
+    border-right: 1px solid var(--kant);
+    border-left: 1px solid var(--kant);
+}
+
+section {
+    padding: clamp(3.5rem, 8vw, 8rem) clamp(1.5rem, 6vw, 6.5rem);
+    border-bottom: 1px solid var(--kant);
+}
+
+#om {
+    padding-top: clamp(3.5rem, 6vw, 6rem);
+    padding-bottom: clamp(3.5rem, 6vw, 6rem);
+}
+
+.om-innehall {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    align-items: center;
+    gap: clamp(2.5rem, 7vw, 8rem);
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+#om h2 { margin-bottom: 1.1rem; font-style: italic; }
+#om .om-citat {
+    margin: 0 0 2rem;
+    font-family: "Bodoni Moda", "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    opacity: 0.95;
+    max-width: 32ch;
+}
+#om p { margin: 0.55rem 0; font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.6; }
+
+.om-bild {
+    width: 100%;
+    max-height: 550px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    filter: saturate(0.72);
+}
+#utbildning > h2, #projekt > h2, #erfarenheter > h2, #kompetenser > h2 { margin-bottom: 3rem; }
+
+.kurslista { border-top: 1px solid var(--kant); }
+
+.kurs { border-bottom: 1px solid var(--kant); }
+
+.kurs summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.35rem 0;
+    cursor: pointer;
+    font-family: "Bodoni Moda", "Playfair Display", Georgia, serif;
+    font-size: clamp(1.45rem, 2.3vw, 2.25rem);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    list-style: none;
+}
+
+.kurs summary::-webkit-details-marker { display: none; }
+
+.kurs summary::after {
+    content: "+";
+    flex: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.kurs[open] summary::after { content: "−"; }
+.kurs summary:hover { padding-left: 0.45rem; }
+
+.kurs-innehall {
+    max-width: 76ch;
+    padding: 0 1.5rem 1.75rem;
+}
+
+.kurs-innehall ul {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.kurs-innehall li { padding-left: 0.4rem; }
+
+/* Projekt – Minimalistisk och redaktionell layout inspirerad av referensbilden */
+#projekt {
+    background: var(--brun);
+    padding-top: clamp(4.5rem, 8vw, 7.5rem);
+    padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.projekt-container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+#projekt .projekt-huvudrubrik {
+    margin-bottom: clamp(3.5rem, 6vw, 5.5rem);
+    font-family: "Bodoni Moda", "Playfair Display", Georgia, serif;
+    font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-align: center;
+}
+
+.projekt-rutnat {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+}
+
+.projekt-kolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.75rem, 4vw, 4rem);
+}
+
+.projekt-kolumn:first-child {
+    border-right: 1px solid var(--delare);
+}
+
+.projekt-nummer {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    color: var(--text);
+    opacity: 0.72;
+}
+
+.projekt-titel {
+    margin: 0 0 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.85rem, 1.05vw, 0.98rem);
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    line-height: 1.45;
+    text-transform: uppercase;
+    color: var(--text);
+    max-width: 34ch;
+}
+
+.projekt-beskrivning {
+    margin: 0;
+    max-width: 44ch;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(0.9rem, 1.05vw, 0.96rem);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text);
+    opacity: 0.88;
+}
+
+@media (max-width: 768px) {
+    #projekt {
+        padding-top: clamp(3.5rem, 7vw, 4.5rem);
+        padding-bottom: clamp(3.5rem, 7vw, 4.5rem);
+    }
+
+    #projekt .projekt-huvudrubrik {
+        font-size: clamp(2.1rem, 7vw, 2.9rem);
+        margin-bottom: 2.5rem;
+    }
+
+    .projekt-rutnat {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .projekt-kolumn {
+        padding: 0;
+    }
+
+    .projekt-kolumn:first-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--delare);
+        padding-bottom: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .projekt-nummer {
+        font-size: 0.8rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .projekt-titel {
+        font-size: 0.92rem;
+        margin-bottom: 1rem;
+        max-width: 30ch;
+    }
+
+    .projekt-beskrivning {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        max-width: 40ch;
+    }
+}
+
+.erfarenhet .foretagslogga {
+    display: grid;
+    width: 100%;
+    aspect-ratio: 1;
+    place-items: center;
+    margin-bottom: 1.8rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--kant);
+}
+
+.erfarenhet .foretagslogga img {
+    width: 82%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+    filter: none;
+}
+
+.erfarenhet .roll {
+    margin: -0.65rem 0 1rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.erfarenhet ul {
+    display: grid;
+    gap: 0.7rem;
+    margin: 1.4rem 0 0;
+    padding-left: 1.15rem;
+    font-size: 0.92rem;
+}
+
+.kompetenslista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.kompetenslista li {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--kant);
+    font-size: 0.9rem;
+}
+
+/* Kontakt */
+#kontakt {
+    padding: 0;
+    background: var(--brun);
+    overflow: hidden;
+}
+
+.kontakt {
+    display: grid;
+    position: relative;
+    grid-template-columns: 0.82fr 1.18fr;
+    align-items: stretch;
+    background: var(--brun);
+    overflow: hidden;
+}
+
+.kontakt-bild {
+    order: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.kontakt-text {
+    order: 2;
+    padding: clamp(2rem, 5vw, 5rem);
+    background: var(--brun);
+    border-left: 1px solid var(--kant);
+}
+
+@media (min-width: 701px) {
+    .kontakt { padding-bottom: 0; }
+
+    .kontakt-bild {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 40.98%;
+        min-height: 0;
+    }
+
+    .kontakt-text { grid-column: 2; }
+}
+
+.kontakt-text h2 { max-width: 13ch; margin-bottom: 1rem; font-style: italic; }
+.kontakt-text > p { margin: 0; font-size: clamp(1rem, 1.4vw, 1.15rem); line-height: 1.6; }
+
+.kontaktformular {
+    margin-top: 2.5rem;
+    padding-top: 1.8rem;
+    border-top: 1px solid var(--kant);
+}
+
+.kontaktformular h3 { margin-bottom: 1.5rem; }
+.formularfalt { display: grid; gap: 0.3rem; margin-bottom: 1rem; }
+
+.formularfalt label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.formularfalt input, .formularfalt textarea {
+    width: 100%;
+    padding: 0.65rem 0;
+    color: var(--text);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--kant);
+    border-radius: 0;
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.formularfalt textarea { min-height: 100px; resize: vertical; }
+.formularfalt input:focus, .formularfalt textarea:focus { outline: 2px solid var(--text); outline-offset: 3px; }
+
+/* HubSpot-formuläret använder samma visuella uttryck som resten av sidan. */
+.kontaktformular .hs-form-field { margin-bottom: 1rem; }
+
+.kontaktformular label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.kontaktformular input,
+.kontaktformular textarea,
+.kontaktformular select {
+    width: 100%;
+    padding: 0.65rem 0;
+    color: var(--text);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--kant);
+    border-radius: 0;
+    font: inherit;
+    font-size: 0.95rem;
+}
+
+.kontaktformular textarea { min-height: 100px; resize: vertical; }
+
+.kontaktformular input:focus,
+.kontaktformular textarea:focus,
+.kontaktformular select:focus { outline: 2px solid var(--text); outline-offset: 3px; }
+
+.kontaktformular .hs-button {
+    padding: 0.85rem 1.65rem;
+    color: #ffffff;
+    background: #15130f;
+    border: 1px solid #15130f;
+    border-radius: 0;
+    font: inherit;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.kontaktformular .hs-button:hover { color: #15130f; background: #ffffff; border-color: #ffffff; }
+.kontaktformular .hs-error-msgs { margin: 0.4rem 0 0; padding: 0; color: #8d1f1f; list-style: none; }
+.kontaktformular .submitted-message { font-family: "Bodoni Moda", "Playfair Display", Georgia, serif; font-size: 1.5rem; }
+
+.formularknapp {
+    padding: 0.85rem 1.65rem;
+    color: var(--yta);
+    background: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 0;
+    font: inherit;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.formularknapp:hover { color: var(--text); background: transparent; }
+.formular-bekraftelse { margin: 1rem 0 0; font-weight: 700; }
+
+/* Sidfot – Sömlös beige botten med centrerad vit knapp & handkodad detalj */
+.sidfot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    background: var(--brun);
+    border: 1px solid var(--kant);
+    border-top: 1px solid var(--kant);
+    color: var(--text);
+}
+
+.till-toppen {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    color: #15130f;
+    background: #ffffff;
+    border: 1px solid #15130f;
+    border-radius: 999px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(21, 19, 15, 0.08);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.till-toppen:hover {
+    background: #f4f0e8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(21, 19, 15, 0.12);
+}
+
+.sidfot-detalj {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.6rem;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    opacity: 0.72;
+}
+
+body.morkt {
+    --text: #f4f0e8;
+    --yta: #242019;
+    --brun: #897b58;
+    --kant: #f4f0e8;
+    --delare: rgba(244, 240, 232, 0.28);
+    background: #15130f;
+}
+
+body.morkt .formularknapp { color: #15130f; background: #f4f0e8; border-color: #f4f0e8; }
+body.morkt .sidfot { background: var(--brun); }
+body.morkt .till-toppen { color: #15130f; background: #ffffff; border-color: #ffffff; }
+body.morkt .till-toppen:hover { background: #f4f0e8; }
+
+@media (max-width: 700px) {
+    body { background: var(--yta); }
+    .sidhuvud { min-height: 0; margin: 0; padding: 1rem; border: 0; border-bottom: 1px solid var(--kant); }
+    .logo img { width: 112px; }
+    nav ul { gap: 0.7rem; }
+    nav a { font-size: 0.64rem; }
+    .sidhuvud button { display: none; }
+    .hero, main, footer { border-right: 0; border-left: 0; }
+    .hero { border-top: 0; }
+    .hero-innehall, .kontakt { grid-template-columns: 1fr; }
+    .hero-bild-omslag { min-height: 420px; border-right: 0; border-bottom: 1px solid var(--kant); }
+    .hero-bild { min-height: 420px; }
+    .hero-text { min-height: 360px; padding: 3rem 1.5rem; }
+    .hero-namn { font-size: clamp(4.2rem, 21vw, 6rem); }
+    section { padding: 4rem 1.5rem; }
+    .om-innehall { grid-template-columns: 1fr; gap: 2rem; }
+    .om-bild { max-width: 420px; max-height: none; }
+    #projekt {
+        padding: 3.5rem 1.25rem;
+    }
+
+    #projekt .projekt-huvudrubrik {
+        font-size: clamp(2rem, 7.5vw, 2.75rem);
+        margin-bottom: 2.25rem;
+        letter-spacing: -0.02em;
+    }
+
+    .projekt-rutnat {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .projekt-kolumn {
+        padding: 0;
+    }
+
+    .projekt-kolumn:first-child {
+        border-right: 0;
+        border-bottom: 1px solid var(--delare);
+        padding-bottom: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .projekt-nummer {
+        font-size: 0.78rem;
+        margin-bottom: 0.85rem;
+        letter-spacing: 0.16em;
+    }
+
+    .projekt-titel {
+        font-size: 0.92rem;
+        margin: 0 0 0.95rem;
+        letter-spacing: 0.08em;
+        line-height: 1.4;
+        max-width: 28ch;
+    }
+
+    .projekt-beskrivning {
+        font-size: 0.92rem;
+        line-height: 1.65;
+        max-width: 38ch;
+    }
+    .kontakt-bild { min-height: 380px; max-height: 460px; position: static; width: 100%; object-position: center top; }
+    .kontakt-text { padding: 3.5rem 1.5rem; border-top: 1px solid var(--kant); border-left: 0; }
+    .sidfot {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 2.25rem 1.5rem;
+        border-right: 0;
+        border-left: 0;
+    }
+    .sidfot-detalj {
+        position: static;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+}
+
+/* Scrollövergång mellan hero och Om mig */
+@media (min-width: 701px) and (prefers-reduced-motion: no-preference) {
+    .hero {
+        position: sticky;
+        top: 0;
+        z-index: 0;
+    }
+
+    main {
+        position: relative;
+        z-index: 2;
+        margin-top: 45vh;
+    }
+
+    #om {
+        background: var(--yta);
+        box-shadow: 0 -18px 34px rgba(21, 19, 15, 0.08);
+        will-change: transform, opacity;
+    }
+
+    @supports (animation-timeline: view()) {
+        #om {
+            animation: om-mig-glider-upp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+            animation-timeline: view();
+            animation-range: entry 22% entry 88%;
+        }
+    }
+}
+
+@keyframes om-mig-glider-upp {
+    from {
+        opacity: 0.25;
+        transform: translateY(12vh);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bild som täcker hela hero-sektionen */
+.hero-innehall {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: min(58vw, 650px);
+    overflow: hidden;
+}
+
+.hero-bild-omslag {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+}
+
+.hero-bild {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center 28%;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    width: min(88%, 610px);
+    min-height: 0;
+    padding: clamp(2rem, 4vw, 4rem);
+    background: rgba(248, 246, 240, 0.84);
+    border: 1px solid rgba(21, 19, 15, 0.8);
+}
+
+@media (max-width: 700px) {
+    .hero-innehall { min-height: 650px; }
+    .hero-bild-omslag { min-height: 0; border: 0; }
+    .hero-bild { min-height: 0; }
+    .hero-text { min-height: 0; }
+}
+
+/* Fullskärms-hero: motivet visas alltid helt, utan beskärning. */
+.hero {
+    height: 100svh;
+    min-height: 680px;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    border: 0;
+}
+
+.hero-innehall {
+    height: 100%;
+    min-height: 100%;
+}
+
+.hero-innehall::before {
+    position: absolute;
+    z-index: 0;
+    inset: -24px;
+    background: url("img/hero-annie-landscape.png") center / cover no-repeat;
+    content: "";
+    filter: blur(16px);
+    opacity: 0.28;
+    transform: scale(1.05);
+}
+
+.hero-bild-omslag { z-index: 1; }
+
+.hero-bild {
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text { z-index: 2; }
+
+@media (max-width: 700px) {
+    .hero { min-height: 620px; }
+    .hero-innehall { min-height: 100%; }
+    .hero-bild { object-position: 70% center; }
+}
+
+/* Slutlig hero-layout: bilden ligger direkt som heltäckande bakgrund. */
+.hero {
+    background: url("img/hero-annie-landscape.png") center / cover no-repeat;
+}
+
+.hero-innehall::before,
+.hero-bild-omslag { display: none; }
+
+.hero-text {
+    width: min(45%, 610px);
+    margin-right: auto;
+    margin-left: clamp(2rem, 9vw, 10rem);
+    padding: 0;
+    background: transparent;
+    border: 0;
+    align-items: flex-start;
+    text-align: left;
+    text-shadow: 0 2px 18px rgba(255, 255, 255, 0.75);
+}
+
+.hero-rubrik { align-items: flex-start; }
+
+.hero-knapp {
+    margin-left: 0;
+    border-color: #15130f;
+}
+
+@media (max-width: 700px) {
+    .hero { background-position: 70% center; }
+
+    .hero-text {
+        width: calc(100% - 3rem);
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-rubrik { align-items: center; }
+    .hero-knapp { margin-right: auto; margin-left: auto; }
+}
+/* Accentfärg för citatet i Om mig */
+#om .om-citat {
+  color: #fff200;
+  text-shadow: none;
+}
