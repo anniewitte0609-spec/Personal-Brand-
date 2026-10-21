@@ -1,6 +1,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 
+
+
 :root {
     --text: #15130f;
     --yta: #f8f6f0;
@@ -10,7 +12,11 @@
 }
 
 
+
+
 html { scroll-behavior: smooth; }
+
+
 
 
 body {
@@ -23,6 +29,8 @@ body {
 }
 
 
+
+
 h1, h2, h3 {
     margin: 0;
     color: var(--text);
@@ -32,11 +40,7 @@ h1, h2, h3 {
 }
 
 
+
+
 h2 { font-size: clamp(2.5rem, 5vw, 5.25rem); letter-spacing: -0.055em; }
 h3 { font-size: clamp(1.6rem, 2.3vw, 2.6rem); letter-spacing: -0.045em; }
-p { max-width: 62ch; }
-a { color: inherit; text-underline-offset: 0.2em; }
-img { display: block; max-width: 100%; }
-
-
-/* Sidhuvud */
