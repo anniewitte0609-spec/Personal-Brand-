@@ -901,3 +901,13 @@ body.morkt .hero-knapp {
     border-color: #15130f;
     text-shadow: none;
 }
+
+
+/* Kontaktbild: hela porträttet visas utan beskärning. */
+.kontakt-bild {
+    width: min(100%, 520px);
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
