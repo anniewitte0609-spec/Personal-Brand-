@@ -885,3 +885,19 @@ body.morkt .till-toppen:hover { background: #f4f0e8; }
   color: #15130f;
   text-shadow: none;
 }
+
+/* Mörkläge: hero-texten ska alltid vara tydlig över det ljusa porträttet. */
+body.morkt .hero-text,
+body.morkt .hero-text h1,
+body.morkt .hero-text .hero-namn,
+body.morkt .hero-text .hero-titel {
+    color: #15130f;
+    text-shadow: 0 2px 16px rgba(248, 246, 240, 0.9);
+}
+
+body.morkt .hero-knapp {
+    color: #15130f;
+    background: #f4f0e8;
+    border-color: #15130f;
+    text-shadow: none;
+}
