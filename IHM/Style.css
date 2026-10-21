@@ -911,3 +911,8 @@ body.morkt .hero-knapp {
     object-fit: contain;
     object-position: center;
 }
+
+.kontakt-bild {
+    position: static;
+    align-self: start;
+}
