@@ -1,0 +1,41 @@
+/* Kontaktformulär i sidans befintliga färger och typografi. */
+.kontaktformular-egen { max-width: 620px; }
+.kontaktformular-egen .formular-overrad {
+    margin: 0 0 0.5rem;
+    font: italic clamp(1.6rem, 2.5vw, 2.2rem)/1.2 "Bodoni Moda", "Playfair Display", Georgia, serif;
+    letter-spacing: -0.035em;
+}
+.kontaktformular-egen .formular-hjalp { margin: 0 0 1.8rem; font-size: 0.75rem; }
+.formular-namn { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.kontaktformular-egen .formularfalt { margin-bottom: 1.5rem; min-width: 0; }
+.kontaktformular-egen input, .kontaktformular-egen textarea {
+    padding: 0.8rem 0.5rem;
+    background: rgb(255 255 255 / 10%);
+    min-height: 48px;
+    font-size: 1rem;
+    transition: background-color 0.15s;
+}
+.kontaktformular-egen textarea { min-height: 125px; }
+.kontaktformular-egen input:focus, .kontaktformular-egen textarea:focus { background: rgb(255 255 255 / 22%); }
+.kontaktformular-egen textarea::placeholder { color: var(--text); opacity: 0.7; }
+.formular-integritet { margin: 0 0 1.4rem; font-size: 0.75rem; line-height: 1.6; }
+.kontaktformular-egen .formularknapp {
+    display: flex; align-items: center; justify-content: space-between; gap: 2.5rem;
+    min-height: 52px; padding: 0.85rem 1.4rem;
+}
+.kontaktformular-egen .formularknapp span { font-size: 1.35rem; line-height: 1; }
+.kontaktformular-egen .formularknapp:focus-visible { outline: 2px solid var(--text); outline-offset: 4px; }
+.kontaktformular-egen .formularknapp:disabled { opacity: 0.65; cursor: wait; }
+.formular-status { margin: 1rem 0 0; font-size: 0.9rem; }
+.formular-status:empty { display: none; }
+.formular-status[data-state="success"], .formular-status[data-state="error"] {
+    padding: 1rem; border: 1px solid currentColor; background: rgb(255 255 255 / 15%);
+}
+.formular-status[data-state="error"] { font-weight: 700; }
+@media (max-width: 480px) {
+    .formular-namn { grid-template-columns: 1fr; gap: 0; }
+    .kontaktformular-egen .formularknapp { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .kontaktformular-egen input, .kontaktformular-egen textarea { transition: none; }
+}

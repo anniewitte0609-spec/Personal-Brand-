@@ -14,6 +14,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="contact-form.css">
+    <script defer src="contact-form.js"></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -207,7 +209,32 @@
                     <h2>Let's stay connected</h2>
                     <p>För frågor, samarbeten eller annat du vill prata om.</p>
 
-                    <div class="kontaktformular" id="hubspot-form" aria-live="polite"></div>
+                    <form class="kontaktformular kontaktformular-egen" id="kontaktformular" aria-label="Kontakta Annie" aria-describedby="formular-info">
+                        <p class="formular-overrad">En idé börjar med ett hej.</p>
+                        <p class="formular-hjalp" id="formular-info">Alla fält är obligatoriska.</p>
+                        <div class="formular-namn">
+                            <div class="formularfalt">
+                                <label for="kontakt-fornamn">Förnamn</label>
+                                <input id="kontakt-fornamn" name="firstname" autocomplete="given-name" maxlength="100" required>
+                            </div>
+                            <div class="formularfalt">
+                                <label for="kontakt-efternamn">Efternamn</label>
+                                <input id="kontakt-efternamn" name="lastname" autocomplete="family-name" maxlength="100" required>
+                            </div>
+                        </div>
+                        <div class="formularfalt">
+                            <label for="kontakt-epost">E-post</label>
+                            <input id="kontakt-epost" name="email" type="email" autocomplete="email" maxlength="254" required>
+                        </div>
+                        <div class="formularfalt">
+                            <label for="kontakt-meddelande">Vad har du på hjärtat?</label>
+                            <textarea id="kontakt-meddelande" name="message" rows="4" maxlength="5000" placeholder="Berätta om din idé, ställ en fråga eller säg hej." required></textarea>
+                        </div>
+                        <p class="formular-integritet">Dina uppgifter skickas till Annie via HubSpot för att hantera din förfrågan.</p>
+                        <button class="formularknapp" type="submit" disabled>Skicka meddelande <span aria-hidden="true">↗</span></button>
+                        <p class="formular-status" id="formular-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+                        <noscript><p>Aktivera JavaScript i webbläsaren för att skicka formuläret.</p></noscript>
+                    </form>
                 </div>
                 <img src="img/Hero%20Bild.png" alt="Porträtt av Annie Witte" class="kontakt-bild">
             </div>
@@ -217,17 +244,7 @@
         <a class="till-toppen" href="#hero">Gå längst upp</a>
         <p class="sidfot-detalj">Handkodad med HTML, CSS och JavaScript</p>
     </footer>
-    <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
-    <script>
-        window.addEventListener("load", function () {
-            hbspt.forms.create({
-                region: "eu1",
-                portalId: "149565937",
-                formId: "03ff3041-6f5e-4e1e-bebf-009c20f19135",
-                target: "#hubspot-form"
-            });
-        });
-    </script>
 </body>
 
 </html>
+
