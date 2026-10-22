@@ -916,3 +916,38 @@ body.morkt .hero-knapp {
     position: static;
     align-self: start;
 }
+
+/* Utbildning: hela kurskortet är klickbart, med två responsiva kolumner. */
+#utbildning .kurslista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(1rem, 2.5vw, 2rem);
+    border-top: 0;
+}
+#utbildning .kurs {
+    min-width: 0;
+    border: 1px solid var(--kant);
+    background: var(--yta);
+    cursor: pointer;
+}
+#utbildning .kurs summary {
+    min-height: 200px;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    align-items: flex-start;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+#utbildning .kurs summary:hover { padding-left: clamp(1.5rem, 3vw, 2.5rem); }
+#utbildning .kurs:hover { background: color-mix(in srgb, var(--yta) 92%, var(--text)); }
+#utbildning .kurs summary:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: -6px;
+}
+#utbildning .kurs[open] summary { min-height: 0; }
+#utbildning .kurs-innehall { padding: 0 clamp(1.5rem, 3vw, 2.5rem) 2rem; }
+@media (max-width: 700px) {
+    #utbildning .kurslista { grid-template-columns: minmax(0, 1fr); }
+    #utbildning .kurs summary { min-height: 150px; }
+    #utbildning .kurs[open] summary { min-height: 0; }
+}
