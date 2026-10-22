@@ -973,3 +973,7 @@ body.morkt .hero-knapp {
         border-top: 1px solid var(--kant);
     }
 }
+
+/* Sömlös övergång från kontaktsektionen till sidfoten. */
+#kontakt { border-bottom: 0; }
+.sidfot { border-top: 0; }
