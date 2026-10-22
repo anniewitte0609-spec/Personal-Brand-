@@ -950,3 +950,26 @@ body.morkt .hero-knapp {
     object-fit: contain;
     object-position: center;
 }
+
+/* Låt porträttet bestämma sektionshöjden, med ett luftigare bildformat. */
+@media (min-width: 1201px) {
+    #kontakt .kontakt { grid-template-columns: 1fr 1fr; }
+    #kontakt .kontakt-text {
+        align-self: stretch;
+        padding: clamp(1.5rem, 2.5vw, 3rem);
+    }
+    #kontakt .kontakt-text h2 { font-size: clamp(2.5rem, 4vw, 4.5rem); }
+    #kontakt .kontaktformular { margin-top: 1.5rem; padding-top: 1.25rem; }
+    #kontakt .formularfalt { margin-bottom: 1rem; }
+    #kontakt .formular-hjalp { margin-bottom: 1.25rem; }
+}
+@media (max-width: 1200px) {
+    #kontakt .kontakt { grid-template-columns: 1fr; }
+    #kontakt .kontakt-bild { grid-column: 1; grid-row: 1; }
+    #kontakt .kontakt-text {
+        grid-column: 1;
+        grid-row: 2;
+        border-left: 0;
+        border-top: 1px solid var(--kant);
+    }
+}
