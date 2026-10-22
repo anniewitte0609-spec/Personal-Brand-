@@ -441,14 +441,7 @@ section {
     overflow: hidden;
 }
 
-.kontakt-bild {
-    order: 1;
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
-    object-fit: cover;
-    object-position: center top;
-}
+
 
 .kontakt-text {
     order: 2;
@@ -460,12 +453,7 @@ section {
 @media (min-width: 701px) {
     .kontakt { padding-bottom: 0; }
 
-    .kontakt-bild {
-        position: absolute;
-        inset: 0 auto 0 0;
-        width: 40.98%;
-        min-height: 0;
-    }
+    
 
     .kontakt-text { grid-column: 2; }
 }
@@ -699,7 +687,7 @@ body.morkt .till-toppen:hover { background: #f4f0e8; }
         line-height: 1.65;
         max-width: 38ch;
     }
-    .kontakt-bild { min-height: 380px; max-height: 460px; position: static; width: 100%; object-position: center top; }
+    
     .kontakt-text { padding: 3.5rem 1.5rem; border-top: 1px solid var(--kant); border-left: 0; }
     .sidfot {
         flex-direction: column;
@@ -904,18 +892,9 @@ body.morkt .hero-knapp {
 
 
 /* Kontaktbild: hela porträttet visas utan beskärning. */
-.kontakt-bild {
-    width: min(100%, 520px);
-    height: auto;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
-}
 
-.kontakt-bild {
-    position: static;
-    align-self: start;
-}
+
+
 
 /* Utbildning: hela kurskortet är klickbart, med två responsiva kolumner. */
 #utbildning .kurslista {
@@ -950,4 +929,24 @@ body.morkt .hero-knapp {
     #utbildning .kurslista { grid-template-columns: minmax(0, 1fr); }
     #utbildning .kurs summary { min-height: 150px; }
     #utbildning .kurs[open] summary { min-height: 0; }
+}
+
+
+/* Bildytans höjd följer originalbildens proportioner på alla skärmar. */
+#kontakt .kontakt { align-items: start; overflow: visible; }
+#kontakt .kontakt-bild {
+    display: block;
+    position: static;
+    inset: auto;
+    align-self: start;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
 }
