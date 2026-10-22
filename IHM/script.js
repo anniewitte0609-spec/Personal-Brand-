@@ -21,3 +21,13 @@ if (tillToppen) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+// Summary hanterar mus och tangentbord. Även den öppna kortytan kan stängas.
+document.querySelectorAll('#utbildning .kurs').forEach((course) => {
+    course.addEventListener('click', (event) => {
+        if (event.target.closest('summary, a, button, input, textarea, select')) return;
+        if (window.getSelection().toString().trim()) return;
+        course.open = !course.open;
+        course.querySelector('summary').focus({ preventScroll: true });
+    });
+});
