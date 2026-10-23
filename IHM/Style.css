@@ -1238,9 +1238,4 @@ body.morkt #om .om-citat { color: #FFFFFF; }
     background-repeat: no-repeat;
 }
 
-/* Kant till kant utan beskärning: höjden följer originalets 2:3-format. */
-#hero {
-    height: 150vw;
-    min-height: 0;
-    background-size: 100% 100%, 100% auto;
-}
+
