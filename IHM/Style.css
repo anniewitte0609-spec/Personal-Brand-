@@ -1239,3 +1239,6 @@ body.morkt #om .om-citat { color: #FFFFFF; }
 }
 
 
+
+/* Google Tag Managers reserviframe ska aldrig synas i layouten. */
+.gtm-noscript { display: none; visibility: hidden; }
