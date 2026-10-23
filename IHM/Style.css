@@ -1204,3 +1204,7 @@ body.morkt .hero-knapp {
 @media (prefers-reduced-motion: reduce) {
     .sidhuvud .menyknapp span { transition: none; }
 }
+
+/* Citatets färg följer sidans befintliga tema. */
+#om .om-citat { color: #000000; }
+body.morkt #om .om-citat { color: #FFFFFF; }
