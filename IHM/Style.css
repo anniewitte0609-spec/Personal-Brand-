@@ -1329,3 +1329,15 @@ body.morkt #om .om-citat { color: #FFFFFF; }
     text-align: left;
     max-width: 100%;
 }
+
+/* Långsam och diskret rörelse, enbart på citatet. */
+@keyframes om-citat-svav {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #om .om-citat { animation: om-citat-svav 7s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #om .om-citat { animation: none; }
+}
