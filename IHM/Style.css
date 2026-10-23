@@ -1287,3 +1287,16 @@ body.morkt #om .om-citat { color: #FFFFFF; }
 
 /* Ingen skiljelinje mellan kontaktbilden och formuläret. */
 #kontakt .kontakt-text { border-left: 0; border-top: 0; }
+
+/* Mjuk bildskuggning bakom utbildningens skarpa innehåll. */
+#utbildning { position: relative; isolation: isolate; overflow: hidden; }
+#utbildning::before {
+    content: "";
+    position: absolute;
+    inset: -64px;
+    z-index: -1;
+    pointer-events: none;
+    background: url("img/education-background.png") center / cover no-repeat;
+    filter: blur(42px) contrast(0.65);
+    opacity: 0.12;
+}
