@@ -947,7 +947,7 @@ body.morkt .hero-knapp {
     max-height: none;
     margin: 0;
     padding: 0;
-    aspect-ratio: auto;
+    aspect-ratio: 1117 / 1408;
     object-fit: contain;
     object-position: center;
 }
