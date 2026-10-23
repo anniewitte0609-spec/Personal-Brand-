@@ -1330,3 +1330,15 @@ body.morkt #om .om-citat { color: #FFFFFF; }
     max-width: 100%;
 }
 
+
+/* Mjuk puls enbart på kontaktformulärets inledande text. */
+@keyframes formular-hej-puls {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #kontakt .formular-overrad {
+        transform-origin: left center;
+        animation: formular-hej-puls 4s ease-in-out infinite;
+    }
+}
