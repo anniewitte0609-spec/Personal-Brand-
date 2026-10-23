@@ -1211,8 +1211,14 @@ body.morkt #om .om-citat { color: #FFFFFF; }
 
 /* Lugn puls på hero-knappen, utan att ändra dess layout eller färger. */
 @keyframes hero-maila-puls {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.025); }
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgb(255 255 255 / 0%), 0 2px 6px rgb(21 19 15 / 6%);
+    }
+    50% {
+        transform: scale(1.045);
+        box-shadow: 0 0 20px 3px rgb(255 255 255 / 22%), 0 5px 14px rgb(21 19 15 / 16%);
+    }
 }
 @media (prefers-reduced-motion: no-preference) {
     #hero .hero-knapp { animation: hero-maila-puls 4s ease-in-out infinite; }
