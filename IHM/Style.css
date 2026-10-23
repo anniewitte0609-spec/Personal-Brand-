@@ -1091,3 +1091,14 @@ body.morkt .hero-knapp {
     #hero .hero-namn { font-size: clamp(2.6rem, 11vw, 4.1rem); }
     #hero .hero-titel { font-size: clamp(1.2rem, 5.2vw, 1.65rem); }
 }
+
+/* Diskret lyft på kompetenskorten, utan att påverka rutnätets mått. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    #kompetenser .kompetenslista li {
+        transition: transform 240ms ease, box-shadow 240ms ease;
+    }
+    #kompetenser .kompetenslista li:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgb(27 25 21 / 9%);
+    }
+}
