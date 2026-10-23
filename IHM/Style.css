@@ -1231,13 +1231,17 @@ body.morkt #om .om-citat { color: #FFFFFF; }
     #hero .hero-knapp { animation: none; }
 }
 
-/* Visa hela det stående originalet utan att ändra hero-textens layout. */
+/* Heltäckande hero-bild med oförändrad textlayout. */
 #hero {
-    background-image: linear-gradient(to bottom, transparent 36%, rgb(21 19 15 / 12%) 48%, rgb(21 19 15 / 55%) 100%), url("img/hero-annie-full.png");
-    background-size: 100% 100%, contain;
+    background-image: linear-gradient(to bottom, transparent 36%, rgb(21 19 15 / 12%) 48%, rgb(21 19 15 / 55%) 100%), url("img/hero-annie-laptop.png");
+    background-size: 100% 100%, cover;
     background-position: center top, center top;
     background-repeat: no-repeat;
 }
+@media (max-width: 1000px) {
+    #hero { background-position: center top, 78% top; }
+}
+
 
 
 
