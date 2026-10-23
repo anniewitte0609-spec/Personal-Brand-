@@ -1284,3 +1284,6 @@ body.morkt #om .om-citat { color: #FFFFFF; }
     #kontakt .till-toppen { animation: none; transition: none; }
     #kontakt .till-toppen:hover { transform: none; }
 }
+
+/* Ingen skiljelinje mellan kontaktbilden och formuläret. */
+#kontakt .kontakt-text { border-left: 0; border-top: 0; }
