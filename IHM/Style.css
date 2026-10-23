@@ -1311,3 +1311,21 @@ body.morkt #om .om-citat { color: #FFFFFF; }
         box-shadow: 0 12px 28px rgb(27 25 21 / 10%);
     }
 }
+
+/* Sidfot efter hela sidans innehåll, med logotypen centrerad oberoende av texten. */
+#kontakt .sidfot { justify-content: flex-end; }
+.webbplats-sidfot {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem clamp(1.5rem, 3vw, 3rem);
+    background: var(--brun);
+}
+.webbplats-sidfot .sidfot-logo { width: 140px; height: auto; }
+.webbplats-sidfot .sidfot-detalj {
+    position: static;
+    justify-self: start;
+    text-align: left;
+    max-width: 100%;
+}
