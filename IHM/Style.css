@@ -1141,3 +1141,66 @@ body.morkt .hero-knapp {
     .sidhuvud nav li:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .sidhuvud nav a { font-size: 0.7rem; white-space: normal; text-align: center; }
 }
+
+/* Mobilmeny inom befintlig header; desktop påverkas inte. */
+.sidhuvud .menyknapp[hidden], .sidhuvud nav[hidden] { display: none; }
+@media (max-width: 600px) {
+    .sidhuvud.mobilmeny-aktiv {
+        position: relative;
+        z-index: 5;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0;
+    }
+    .sidhuvud.mobilmeny-aktiv .logo { justify-self: start; }
+    .sidhuvud .menyknapp:not([hidden]) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 48px;
+        height: 48px;
+        padding: 10px;
+        border: 0;
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+    .menyknapp span {
+        width: 24px;
+        height: 1px;
+        background: currentColor;
+        transition: transform 180ms ease, opacity 180ms ease;
+    }
+    .menyknapp[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .menyknapp[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .menyknapp[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .sidhuvud.mobilmeny-aktiv nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem 1.5rem 1.5rem;
+        max-height: 70vh;
+        max-height: 70svh;
+        overflow-y: auto;
+        background: var(--brun);
+        border-bottom: 1px solid var(--delare);
+        box-shadow: 0 12px 20px rgb(21 19 15 / 8%);
+    }
+    .sidhuvud.mobilmeny-aktiv nav ul { display: flex; flex-direction: column; gap: 0; }
+    .sidhuvud.mobilmeny-aktiv nav a {
+        justify-content: flex-start;
+        min-height: 48px;
+        padding: 0.75rem 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-align: left;
+    }
+    .sidhuvud .menyknapp:focus-visible,
+    .sidhuvud.mobilmeny-aktiv nav a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .sidhuvud .menyknapp span { transition: none; }
+}
