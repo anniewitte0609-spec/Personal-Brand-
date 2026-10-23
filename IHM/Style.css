@@ -1243,3 +1243,40 @@ body.morkt #om .om-citat { color: #FFFFFF; }
 
 /* Google Tag Managers reserviframe ska aldrig synas i layouten. */
 .gtm-noscript { display: none; visibility: hidden; }
+
+/* Kontaktsektionens avslutning: tekniktext och tillgänglig uppåtknapp. */
+#kontakt .sidfot {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+#kontakt .sidfot-detalj {
+    position: static;
+    text-align: left;
+    min-width: 0;
+}
+#kontakt .till-toppen {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #15130f;
+}
+#kontakt .till-toppen svg { width: 22px; height: 22px; }
+#kontakt .till-toppen:focus-visible { outline: 2px solid var(--text); outline-offset: 5px; }
+@keyframes kontakt-topp-puls {
+    0%, 100% { scale: 1; }
+    50% { scale: 1.035; }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #kontakt .till-toppen { animation: kontakt-topp-puls 5s ease-in-out infinite; }
+    #kontakt .till-toppen:hover { transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    #kontakt .till-toppen { animation: none; transition: none; }
+    #kontakt .till-toppen:hover { transform: none; }
+}
