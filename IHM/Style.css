@@ -1208,3 +1208,18 @@ body.morkt .hero-knapp {
 /* Citatets färg följer sidans befintliga tema. */
 #om .om-citat { color: #000000; }
 body.morkt #om .om-citat { color: #FFFFFF; }
+
+/* Lugn puls på hero-knappen, utan att ändra dess layout eller färger. */
+@keyframes hero-maila-puls {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.025); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    #hero .hero-knapp { animation: hero-maila-puls 4s ease-in-out infinite; }
+    #hero .hero-knapp:hover,
+    #hero .hero-knapp:focus-visible,
+    #hero .hero-knapp:active { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #hero .hero-knapp { animation: none; }
+}
