@@ -906,8 +906,9 @@ body.morkt .hero-knapp {
 }
 #utbildning .kurs {
     min-width: 0;
-    border: 1px solid var(--kant);
-    background: var(--brun);
+    border: 1px solid var(--delare);
+    background: color-mix(in srgb, var(--yta) 93%, var(--brun));
+    box-shadow: 0 5px 18px rgb(27 25 21 / 4%);
     cursor: pointer;
 }
 #utbildning .kurs summary {
@@ -918,7 +919,7 @@ body.morkt .hero-knapp {
     overflow-wrap: anywhere;
 }
 #utbildning .kurs summary:hover { padding-left: clamp(1.5rem, 3vw, 2.5rem); }
-#utbildning .kurs:hover { background: var(--brun); }
+#utbildning .kurs:hover { background: color-mix(in srgb, var(--yta) 93%, var(--brun)); }
 #utbildning .kurs summary:focus-visible {
     outline: 2px solid var(--text);
     outline-offset: -6px;
