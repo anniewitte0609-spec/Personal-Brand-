@@ -18,7 +18,7 @@ const tillToppen = document.querySelector(".till-toppen");
 if (tillToppen) {
     tillToppen.addEventListener("click", function (event) {
         event.preventDefault();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     });
 }
 
